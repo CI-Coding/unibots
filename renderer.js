@@ -85,9 +85,10 @@ window.addEventListener('DOMContentLoaded', () => {
             initBotAuto: document.getElementById('init_bot_auto')
         }
     }
-
+    
     API.getConfig().then((data) => {
         loadConfig(data)
+        console.log('datamanal',data)
         if (userConfig.initBotAuto)
             initBot()
     })
